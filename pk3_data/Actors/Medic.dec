@@ -1,9 +1,9 @@
-Actor Medic : DoomPlayer 10003
+Actor FTMedic : DoomPlayer 10003
 {
 	Player.DisplayName "Medic"
 	Player.WeaponSlot 1, Melee
 	Player.StartItem "IsMedic"
-	Player.StartItem "Melee"
+	Player.StartItem Melee
 	
 	States
 	{

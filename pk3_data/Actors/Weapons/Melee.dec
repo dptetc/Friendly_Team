@@ -1,7 +1,7 @@
 Actor Melee : Weapon
 {
 	Weapon.SlotNumber 1
-	Weapon.SelectionOrder 3700
+//	Weapon.SelectionOrder 3700
 	Weapon.Kickback 100
 	+WEAPON.MELEEWEAPON
 	+AMMO_OPTIONAL
@@ -10,8 +10,8 @@ Actor Melee : Weapon
 	States
 	{
 	Ready:
-		NULL Z 0 A_JumpIfInventory("TossStimpack", 1, "TossStimpack")
-		NULL Z 0 A_JumpIfInventory("TossMedikit", 1, "TossMedikit")
+		PUCH A 0 A_JumpIfInventory("TossStimpack", 1, "TossStimpack")
+		PUCH A 0 A_JumpIfInventory("TossMedikit", 1, "TossMedikit")
 		PUCH A 1 A_WeaponReady
 		Loop
 	Deselect:
