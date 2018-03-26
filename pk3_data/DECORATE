@@ -1,0 +1,6 @@
+#include "Actors/Main.dec"
+#include "Actors/Soldier.dec"
+#include "Actors/Engineer.dec"
+#include "Actors/Medic.dec"
+#include "Actors/Monsters.dec"
+#include "Actors/Misc.dec"

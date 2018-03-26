@@ -1,0 +1,13 @@
+Thumbs.db
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.bak
+*.bak[0-9]
+*.backup
+*.backup[0-9]
+*.pk3
+*.pk7
+*.dbs
