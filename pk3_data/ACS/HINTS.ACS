@@ -3,7 +3,7 @@
 
 #DEFINE HINTCOUNT 1
 str Hints[HINTCOUNT] = { 
-	"As medic, you can collect spare healthpacks and drop them to your teammates.",
+	"As a medic, you can collect spare healthpacks and drop them to your teammates.",
 };
 
 script 989 DEATH

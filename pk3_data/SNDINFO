@@ -1,3 +1,7 @@
+//NEW
+Fist/Swing DSFistGo
+//
+
 $random wrench/swing { wrench/swing1 wrench/swing2 }
 $random wrench/hitwall { wrench/hitwall1 wrench/hitwall2 wrench/hitwall3 }
 $random wrench/hitbody { wrench/hitbody1 wrench/hitbody2 wrench/hitbody3 wrench/hitbody4 }
