@@ -1,11 +1,11 @@
-gameinfo
+GameInfo
 {
-	titlepage = "FT_TITLE"
-	creditpage = "FT_TITLE"
-	mapinfo = "MAPINFO.DPT"
-	//intermissionmusic = "INTERMUS"
+	TitlePage = "FT_TITLE"
+	CreditPage = "FT_TITLE"
+	PlayerClasses = "Engineer", "Medic", "Soldier"
 }
-map TITLEMAP ""
+
+Map TITLEMAP ""
 {
-	music = "TITLEMUS"
+	Music = "TITLEMUS"
 }

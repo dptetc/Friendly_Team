@@ -1,5 +1,5 @@
+#library "FRTEAM"
 #include "zcommon.acs"
-#library "global"
 
 // Engineer Ammo Regen
 script 987 (void)

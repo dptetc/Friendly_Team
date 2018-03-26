@@ -1,8 +1,3 @@
-ClearPlayerClasses
-AddPlayerClass Fighter
-AddPlayerClass Engineer
-AddPlayerClass Healer
-
 weaponsection "Friendly Team"
 setslot 0 Wrench CrateGun HealthPack Curing_Cannon
 setslot 1 Hands Fighter_Chainsaw Wrench_Melee Knife

@@ -1,3 +1,27 @@
+ACTOR WakeMissile 
+{
+	Scale 0.25
+	Radius 4
+	Height 4
+	speed 7
+	PROJECTILE
+	+FRIENDLY
+	+NOGRAVITY
+	+NOCLIP
+	states
+	{
+	Spawn:
+		HEAL A 2 A_VileChase
+		Loop
+	Death:
+		TNT1 A 1
+		STop
+	Heal:
+		TNT1 A 1
+		Stop
+	}
+}
+
 ACTOR Melees : Custominventory
 {
 	+SOLID

@@ -4,6 +4,7 @@ ehthumbs_vista.db
 *.stackdump
 [Dd]esktop.ini
 $RECYCLE.BIN/
+test_build.bat
 *.bak
 *.bak[0-9]
 *.backup
