@@ -4,3 +4,4 @@
 #include "Actors/Engineer.dec"
 #include "Actors/Medic.dec"
 #include "Actors/Monsters.dec"
+#include "Actors/Health/Stimpack.dec"

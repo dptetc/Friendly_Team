@@ -1,0 +1,11 @@
+#library "FRTEAM"
+#include "zcommon.acs"
+
+script "CheckMaxHealth" (void)
+{
+	SetResultValue(0);
+	int MaxHealth = GetActorProperty(0, APROP_SPAWNHEALTH);
+    if ( MaxHealth == 0 ) MaxHealth = 100;
+	if ( GetActorProperty(0, APROP_HEALTH) == MaxHealth )
+		SetResultValue(1);	
+}

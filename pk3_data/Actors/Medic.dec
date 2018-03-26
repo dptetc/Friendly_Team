@@ -38,13 +38,13 @@ Actor Medic : DoomPlayer 10003
 	}
 }
 
+Actor IsMedic : Inventory { Inventory.MaxAmount 1 }
+
 Actor MedicStimpackHealth : Health
 {
 	Inventory.Amount 15
 	Inventory.PickupMessage "$GOTSTIM"
 }
-	
-
 
 Actor MedicStimpackItem : CustomInventory
 {
@@ -71,4 +71,5 @@ Actor MedicStimpackItem : CustomInventory
 Actor MedicStimpack : Inventory
 {
 	Inventory.MaxAmount 3
+	Inventory.PickupMessage "Got a spare stimpack."
 }

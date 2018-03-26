@@ -1,9 +1,1 @@
-weaponsection "Friendly Team"
-setslot 0 Wrench CrateGun HealthPack Curing_Cannon
-setslot 1 Hands Fighter_Chainsaw Wrench_Melee Knife
-setslot 2 Fighter_HandGun Engineer_Handgun Healer_HandGun
-setslot 3 HardGutted_Shotgun Engineer_Shotgun SawedOff_Shotgun SSG
-setslot 4 Heavy_Chaingun MP5 UZI Nail_Repeater Engineer_NailGun Ripper_Cannon
-setslot 5 Bazooka NailBomb_Launcher Flare_Gun GRENADER
-setslot 6 Shock_Gun RailGun Zero_Gun
-setslot 7 BFG24K Electric_Launcher Healing_Cannon CANNON Nuclear_Launcher ArchVile_Spawner
+ 
