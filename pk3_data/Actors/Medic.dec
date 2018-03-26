@@ -1,7 +1,9 @@
 Actor Medic : DoomPlayer 10003
 {
 	Player.DisplayName "Medic"
+	Player.WeaponSlot 1, Melee
 	Player.StartItem "IsMedic"
+	Player.StartItem "Melee"
 	
 	States
 	{
@@ -39,6 +41,8 @@ Actor Medic : DoomPlayer 10003
 }
 
 Actor IsMedic : Inventory { Inventory.MaxAmount 1 }
+Actor TossStimpack : Inventory { Inventory.MaxAmount 1 }
+Actor TossMedikit : Inventory { Inventory.MaxAmount 1 }
 
 Actor MedicStimpackHealth : Health
 {
@@ -68,10 +72,21 @@ Actor MedicStimpackItem : CustomInventory
 	}
 }
 
-Actor MedicStimpack : Inventory
+Actor MedicStimpack : CustomInventory
 {
 	Inventory.MaxAmount 3
 	Inventory.PickupMessage "Got a spare stimpack."
+	Inventory.Icon "STIMA0"
+	
+	+INVENTORY.INVBAR
+	+INVENTORY.UNTOSSABLE
+	
+	States
+	{
+	Use:
+		NULL Z 0 A_GiveInventory("TossStimpack", 1)
+		Stop
+	}
 }
 
 Actor MedicMedikitHealth : Health
@@ -102,8 +117,19 @@ Actor MedicMedikitItem : CustomInventory
 	}
 }
 
-Actor MedicMedikit : Inventory
+Actor MedicMedikit : CustomInventory
 {
 	Inventory.MaxAmount 1
 	Inventory.PickupMessage "Got a spare medikit."
+	Inventory.Icon "MEDIA0"
+	
+	+INVENTORY.INVBAR
+	+INVENTORY.UNTOSSABLE
+	
+	States
+	{
+	Use:
+		NULL Z 0 A_GiveInventory("TossMedikit", 1)
+		Stop
+	}
 }

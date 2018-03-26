@@ -5,3 +5,5 @@
 #include "Actors/Medic.dec"
 #include "Actors/Monsters.dec"
 #include "Actors/Health/Stimpack.dec"
+#include "Actors/Health/Medikit.dec"
+#include "Actors/Weapons/Melee.dec"
