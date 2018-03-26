@@ -1,165 +1,65 @@
-Height 0;
+InterpolateHealth True, 6;
+InterpolateArmor True, 6;
+base Doom;
+Height 32;
 MonospaceFonts True, "0";
 
-StatusBar FullScreen, FullScreenOffsets, ForceScaled
+Statusbar FullScreen, ForceScaled {}
+
+statusbar normal // Standard Doom Status bar
 {
-	DrawKeyBar 3, horizontal, 13, 8, 0;
-	DrawImage "PROFIT", 8, 170;
-	DrawBar "ARMOFULL", "DOOMNULL", Armor, horizontal, 18, 170;
-	DrawImage "PROHEAL", 8, 180;
-	DrawBar "DOOMFULL", "DOOMNULL", Health, horizontal, 18, 180;
-	InInventory IsEngineer, 1
+	drawimage "STBAR", 0, 168;
+	drawimage "STTPRCNT", 90, 171;
+	drawimage "STTPRCNT", 221, 171;
+	drawnumber 3, HUDFONT_DOOM, untranslated, ammo1, 44, 171;
+	drawnumber 3, HUDFONT_DOOM, untranslated, health, 90, 171;
+	drawnumber 3, HUDFONT_DOOM, untranslated, armor, 221, 171;
+
+	//keys
+	drawswitchableimage keyslot 2 && 5, "nullimage", "STKEYS0", "STKEYS3", "STKEYS6", 239, 171;
+	drawswitchableimage keyslot 3 && 6, "nullimage", "STKEYS1", "STKEYS4", "STKEYS7", 239, 181;
+	drawswitchableimage keyslot 1 && 4, "nullimage", "STKEYS2", "STKEYS5", "STKEYS8", 239, 191;
+
+	drawnumber 3, INDEXFONT, gold, ammo Clip, 288, 173;
+	drawnumber 3, INDEXFONT, gold, ammo Shell, 288, 179;
+	drawnumber 3, INDEXFONT, gold, ammo RocketAmmo, 288, 185;
+	drawnumber 3, INDEXFONT, gold, ammo Cell, 288, 191;
+
+	drawnumber 3, INDEXFONT, gold, ammocapacity Clip, 314, 173;
+	drawnumber 3, INDEXFONT, gold, ammocapacity Shell, 314, 179;
+	drawnumber 3, INDEXFONT, gold, ammocapacity RocketAmmo, 314, 185;
+	drawnumber 3, INDEXFONT, gold, ammocapacity Cell, 314, 191;
+	gamemode deathmatch, teamgame
 	{
-		DrawImage "GO99ICON", 290, 0;
+		drawnumber 2, HUDFONT_DOOM, untranslated, frags, 138, 171;
 	}
-	InInventory IsHealer, 1
+	gamemode cooperative, singleplayer
 	{
-		DrawImage "PBAKICON", 290, 0;
+		drawimage "STARMS", 104, 168;
+		drawswitchableimage weaponslot 2, "STGNUM2", "STYSNUM2", 111, 172; 
+		drawswitchableimage weaponslot 3, "STGNUM3", "STYSNUM3", 123, 172;
+		drawswitchableimage weaponslot 4, "STGNUM4", "STYSNUM4", 135, 172;
+		drawswitchableimage weaponslot 5, "STGNUM5", "STYSNUM5", 111, 182;
+		drawswitchableimage weaponslot 6, "STGNUM6", "STYSNUM6", 123, 182;
+		drawswitchableimage weaponslot 7, "STGNUM7", "STYSNUM7", 135, 182;
 	}
-	InInventory IsFighter, 1
+	gamemode cooperative, deathmatch, teamgame
 	{
-		DrawImage "PLAYICON", 290, 0;
+		drawimage translatable "STFBANY", 144, 169;
 	}
-	IsSelected Fighter_HandGun
+	drawselectedinventory alternateonempty, INDEXFONT, 143, 168
 	{
-		DrawImage "SBOAMMO1", 295, 177;
-		DrawBar "CLIPFULL", "DOOMNULL", Ammo1, horizontal, reverse ,232, 180;
+		drawmugshot 5, 143, 168;
 	}
-	IsSelected Engineer_HandGun
-	{
-		DrawImage "SBOAMMO1", 295, 177;
-		DrawBar "CLIPFULL", "DOOMNULL", Ammo1, horizontal, reverse ,232, 180;
-	}
-	IsSelected Healer_Handgun
-	{
-		DrawImage "SBOAMMO5", 295, 177;
-		DrawBar "PLASFULL", "DOOMNULL", Ammo1, horizontal, reverse ,232, 180;
-	}
-	IsSelected HardGutted_Shotgun
-	{
-		DrawImage "SBOAMMO2", 295, 177;
-		DrawBar "SHELFULL", "DOOMNULL", Ammo1, horizontal, reverse ,232, 180;
-	}
-	IsSelected SSG
-	{
-		DrawImage "SBOAMMO8", 295, 177;
-		DrawBar "SHELFULL", "DOOMNULL", Ammo1, horizontal, reverse ,232, 180;
-	}
-	IsSelected Engineer_Shotgun
-	{
-		DrawImage "SBOAMMO2", 295, 177;
-		DrawBar "SHELFULL", "DOOMNULL", Ammo1, horizontal, reverse ,232, 180;
-	}
-	IsSelected SawedOff_Shotgun
-	{
-		DrawImage "SBOAMMO2", 295, 177;
-		DrawBar "SHELFULL", "DOOMNULL", Ammo1, horizontal, reverse ,232, 180;
-	}
-	IsSelected Uzi
-	{
-		DrawImage "SBOAMMO1", 295, 177;
-		DrawBar "CLIPFULL", "DOOMNULL", Ammo1, horizontal, reverse ,232, 180;
-	}
-	IsSelected Ripper_cannon
-	{
-		DrawImage "SBOAMMO3", 295, 177;
-		DrawBar "CLIPFULL", "DOOMNULL", Ammo1, horizontal, reverse ,232, 180;
-	}
-	IsSelected Heavy_Chaingun
-	{
-		DrawImage "SBOAMMO3", 295, 177;
-		DrawBar "CLIPFULL", "DOOMNULL", Ammo1, horizontal, reverse ,232, 180;
-	}
-	IsSelected Nail_Repeater
-	{
-		DrawImage "SBOAMMO3", 295, 177;
-		DrawBar "CLIPFULL", "DOOMNULL", Ammo1, horizontal, reverse ,232, 180;
-	}
-	IsSelected Engineer_NailGun
-	{
-		DrawImage "SBOAMMO3", 295, 177;
-		DrawBar "CLIPFULL", "DOOMNULL", Ammo1, horizontal, reverse ,232, 180;
-	}
-	IsSelected Shock_Gun
-	{
-		DrawImage "SBOAMMO5", 295, 177;
-		DrawBar "SHCKFULL", "DOOMNULL", Ammo1, horizontal, reverse ,232, 180;
-	}
-	IsSelected MP5
-	{
-		DrawImage "SBOAMMO1", 295, 177;
-		DrawBar "CLIPFULL", "DOOMNULL", Ammo1, horizontal, reverse ,232, 180;
-		DrawImage "SBOAMMO4", 295, 167;
-		DrawBar "ROCKFULL", "DOOMNULL", Ammo2, horizontal, reverse ,232, 170;
-	}
-	IsSelected NailBomb_Launcher
-	{
-		DrawImage "SBOAMMO3", 295, 177;
-		DrawBar "CLIPFULL", "DOOMNULL", Ammo1, horizontal, reverse ,232, 180;
-		DrawImage "SBOAMMO4", 295, 167;
-		DrawBar "ROCKFULL", "DOOMNULL", Ammo2, horizontal, reverse ,232, 170;
-	}
-	IsSelected Grenader
-	{
-		DrawImage "SBOAMMO4", 295, 177;
-		DrawBar "ROCKFULL", "DOOMNULL", Ammo1, horizontal, reverse ,232, 180;
-	}
-	IsSelected Flare_Gun
-	{
-		DrawImage "SBOAMMO2", 295, 177;
-		DrawBar "CLIPFULL", "DOOMNULL", Ammo1, horizontal, reverse ,232, 180;
-		DrawImage "SBOAMMO5", 295, 167;
-		DrawBar "ROCKFULL", "DOOMNULL", Ammo2, horizontal, reverse ,232, 170;
-	}
-	IsSelected Bazooka
-	{
-		DrawImage "SBOAMMO4", 295, 177;
-		DrawBar "ROCKFULL", "DOOMNULL", Ammo1, horizontal, reverse ,232, 180;
-	}
-	IsSelected Zero_Gun
-	{
-		DrawImage "SBOAMMO5", 295, 177;
-		DrawBar "RAILFULL", "DOOMNULL", Ammo1, horizontal, reverse ,232, 180;
-	}
-	IsSelected BFG24K
-	{
-		DrawImage "SBOAMMO6", 295, 177;
-		DrawBar "PLASFULL", "DOOMNULL", Ammo1, horizontal, reverse ,232, 180;
-	}
-	IsSelected Healing_Cannon
-	{
-		DrawImage "SBOFRAGS", 295, 177; 
-		DrawBar "HEALFULL", "DOOMNULL", Ammo1, horizontal, reverse ,232, 180;
-	}
-	IsSelected Curing_Cannon
-	{
-		DrawImage "SBOHEALT", 295, 177;
-		DrawBar "PLASFULL", "DOOMNULL", Ammo1, horizontal, reverse ,232, 180;
-	}
-	IsSelected Electric_Launcher
-	{
-		DrawImage "SBOAMMO4", 295, 177;
-		DrawBar "ROCKFULL", "DOOMNULL", Ammo1, horizontal, reverse ,232, 180;
-		DrawImage "SBOAMMO6", 295, 167;
-		DrawBar "SHCKFULL", "DOOMNULL", Ammo2, horizontal, reverse ,232, 170;
-	}
-	IsSelected Cannon
-	{
-		DrawImage "SBOAMMO4", 295, 177;
-		DrawBar "ROCKFULL", "DOOMNULL", Ammo1, horizontal, reverse ,232, 180;
-		DrawImage "SBOAMMO5", 295, 167;
-		DrawBar "ROCKFULL", "DOOMNULL", Ammo2, horizontal, reverse ,232, 170;
-	}
-	IsSelected Nuclear_Launcher
-	{
-		DrawImage "SBOEMPTY", 295, 177;
-		DrawBar "NUKRFULL", "DOOMNULL", Ammo1, horizontal, reverse ,232, 180;
-		DrawImage "SBOAMMO5", 295, 167;
-		DrawBar "ROCKFULL", "DOOMNULL", Ammo RadiationQuanity, horizontal, reverse ,232, 170;
-	}
-	IsSelected ArchVile_Spawner
-	{
-		DrawImage "SBOFRAGS", 295, 177;
-		DrawBar "ARCHFULL", "DOOMNULL", Health, horizontal, reverse ,232, 180;
-	}
+}
+
+//statusbar automap {}
+
+statusbar inventory // Standard bar overlay (ZDoom Addition)
+{
+	drawinventorybar Doom, 7, INDEXFONT, 50, 170;
+}
+statusbar inventoryfullscreen // ZDoom HUD overlay.
+{
+	drawinventorybar Doom, translucent, 7, INDEXFONT, 50, 170;
 }
