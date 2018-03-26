@@ -1,0 +1,10 @@
+//Главное
+#include "actors/global.dpt"
+//Классы и их оружия
+#include "actors/classes/fighter.dpt"
+#include "actors/classes/engineer.dpt"
+#include "actors/classes/healer.dpt"
+//Монстры
+#include "actors/monsters.dpt"
+//Остальное
+#include "actors/other.dpt"

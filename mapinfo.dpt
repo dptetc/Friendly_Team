@@ -1,0 +1,11 @@
+gameinfo
+{
+	titlepage = "FT_TITLE"
+	creditpage = "FT_TITLE"
+	mapinfo = "MAPINFO.DPT"
+	//intermissionmusic = "INTERMUS"
+}
+map TITLEMAP ""
+{
+	music = "TITLEMUS"
+}
