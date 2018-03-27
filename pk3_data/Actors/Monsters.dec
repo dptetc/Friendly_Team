@@ -473,12 +473,12 @@ ACTOR MiniCyberdemon
 }
 ACTOR FT_ZombieMan : ZombieMan
 {
-	PainChance 255
+	PainChance SmallStun, 255
 	States
 	{
 	Pain.SmallStun:
-		"####" "#" 3
-		"####" "#" 3 A_Pain
+		POSS G 5
+		POSS G 30 A_Pain
 		Goto See
 	}
 }
