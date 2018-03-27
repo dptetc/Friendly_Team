@@ -1,9 +1,9 @@
 Actor FTMedic : DoomPlayer
 {
 	Player.DisplayName "Medic"
-	Player.WeaponSlot 1, Melee
+	Player.WeaponSlot 1, "Melee"
 	Player.StartItem "IsMedic"
-	Player.StartItem Melee
+	Player.StartItem "Melee"
 	
 	States
 	{

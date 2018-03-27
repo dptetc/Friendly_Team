@@ -1,4 +1,4 @@
-ACTOR SoldierStatue 12501
+Actor SoldierStatue 12501
 {
 	Radius 16
 	Height 56
@@ -11,7 +11,7 @@ ACTOR SoldierStatue 12501
 	}
 }
 
-ACTOR EngineerStatue 12502
+Actor EngineerStatue 12502
 {
 	Radius 16
 	Height 56
@@ -24,7 +24,7 @@ ACTOR EngineerStatue 12502
 	}
 }
 
-ACTOR FTMedicStatue 12503
+Actor MedicStatue 12503
 {
 	Radius 16
 	Height 56

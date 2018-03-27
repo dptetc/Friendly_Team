@@ -7,3 +7,4 @@
 #include "Actors/Health/Stimpack.dec"
 #include "Actors/Health/Medikit.dec"
 #include "Actors/Weapons/Melee.dec"
+#include "Actors/Statues.dec"

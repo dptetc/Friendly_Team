@@ -15,28 +15,6 @@ script 987 (void)
 	Terminate;
 }
 
-// Medic Health Regen
-script 988 (void)
-{
-	LocalAmbientSound("Healing", 127);
-	GiveInventory("HealthBonus", 10);
-	FadeTo(255, 0, 0, 1966, 0);
-	Delay(5);
-	FadeTo(255, 0, 0, 0, 0);
-	Terminate;
-}
-
-// Fighter Ammo Regen
-script 989 (void)
-{
-	AmbientSound("IMPORTANTITEMS", 127);
-	GiveInventory("BackPack", 1);
-	FadeTo(128, 128, 128, 1966, 0);
-	Delay(5);
-	FadeTo(128, 128, 128, 0, 0);
-	Terminate;
-}
-
 // Minigun Sentry Mode
 script 900 (void)
 {

@@ -2,7 +2,7 @@ GameInfo
 {
 	TitlePage = "FT_TITLE"
 	CreditPage = "FT_TITLE"
-	PlayerClasses = "Engineer", "FTMedic", "Soldier"
+	PlayerClasses = "Engineer", "FTMedic", "FTSoldier"
 }
 
 Map TITLEMAP ""
