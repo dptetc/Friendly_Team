@@ -44,35 +44,46 @@ Actor IsMedic : Inventory { Inventory.MaxAmount 1 }
 Actor TossStimpack : Inventory { Inventory.MaxAmount 1 }
 Actor TossMedikit : Inventory { Inventory.MaxAmount 1 }
 
-Actor MedicStimpackHealth : Health
+Actor MedicStimpack : Health
 {
+	Radius 8
+	Height 16
+	Mass 100
 	Inventory.Amount 15
 	Inventory.PickupMessage "$GOTSTIM"
-}
-
-Actor MedicStimpackItem : CustomInventory
-{
-//	Radius
-//	Height
-	Mass 100
-	DamageType SmallStun
 	
 	States
 	{
 	Spawn:
 		STIM A -1
 		Stop
-	Pickup:
-//		NULL Z 0 A_JumpIfInventory("IsMedic", 1, 1)
-//		Goto NotMedic
-//		Fail
-//	NotMedic:
-		NULL Z 0 A_GiveInventory("MedicStimpackItem", 1)
+	}
+}
+
+Actor ThrownStimpack
+{
+	Radius 8
+	Height 16
+	Mass 100
+	Damage 1
+	DamageType SmallStun
+	Speed 15
+	
+	+MISSILE
+	
+	States
+	{
+	Spawn:
+		STIM A 1
+		Loop
+	Death:
+		STIM A 0
+		STIM A 0 A_DropItem("MedicStimpack")
 		Stop
 	}
 }
 
-Actor MedicStimpack : CustomInventory
+Actor MedicStimpackItem : CustomInventory
 {
 	Inventory.MaxAmount 3
 	Inventory.PickupMessage "Got a spare stimpack."
@@ -89,35 +100,46 @@ Actor MedicStimpack : CustomInventory
 	}
 }
 
-Actor MedicMedikitHealth : Health
+Actor MedicMedikit : Health
 {
+	Radius 14
+	Height 20
+	Mass 150
 	Inventory.Amount 40
-	Inventory.PickupMessage "$GOTSTIM"
-}
-
-Actor MedicMedikitItem : CustomInventory
-{
-//	Radius
-//	Height
-	Mass 100
-	DamageType SmallStun
+	Inventory.PickupMessage "$GOTMEDIKIT"
 	
 	States
 	{
 	Spawn:
 		MEDI A -1
 		Stop
-	Pickup:
-//		NULL Z 0 A_JumpIfInventory("IsMedic", 1, 1)
-//		Goto NotMedic
-//		Fail
-//	NotMedic:
-		NULL Z 0 A_GiveInventory("MedicMedikitItem", 1)
+	}
+}
+
+Actor ThrownMedikit
+{
+	Radius 14
+	Height 20
+	Mass 150
+	Damage 1
+	DamageType SmallStun
+	Speed 10
+	
+	+MISSILE
+	
+	States
+	{
+	Spawn:
+		MEDI A 1
+		Loop
+	Death:
+		MEDI A 0
+		MEDI A 0 A_DropItem("MedicMedikit")
 		Stop
 	}
 }
 
-Actor MedicMedikit : CustomInventory
+Actor MedicMedikitItem : CustomInventory
 {
 	Inventory.MaxAmount 1
 	Inventory.PickupMessage "Got a spare medikit."

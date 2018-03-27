@@ -10,7 +10,7 @@ Actor FTMedikit : CustomInventory replaces Medikit
 		Goto GiveHealth
 		NULL Z 0 A_JumpIfInventory("IsMedic", 1, 1)
 		Fail
-		NULL Z 0 A_GiveInventory("MedicMedikit", 1)
+		NULL Z 0 A_GiveInventory("MedicMedikitItem", 1)
 		Stop
 	GiveHealth:
 		NULL Z 0 A_GiveInventory("Medikit", 1)
