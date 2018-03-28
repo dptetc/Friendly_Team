@@ -21,6 +21,8 @@ Actor Melee : Weapon
 		FIST A 1 A_Raise
 		Loop
 	Fire:
+		Goto Ready
+/*	Fire:
 		NULL Z 0 A_JumpIfInventory("FistToken", 8, "LeftPunch")
 		FIST A 1 Offset(0, 34)
 		FIST A 1 Offset(0, 48)
@@ -69,7 +71,7 @@ Actor Melee : Weapon
 		MLEG H 8 Offset(0, 32)
 		MLEG H 8
 		PUCH K 4 A_ReFire
-		Goto Ready    
+		Goto Ready*/
 	TossStimpack:
 		NULL Z 0 A_FireCustomMissile ("ThrownStimpack", 0, 0, 0, 0, 0, 6)
 		NULL Z 0 A_TakeInventory("TossStimpack", 8)
