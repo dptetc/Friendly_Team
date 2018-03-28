@@ -1,12 +1,18 @@
-CREDITS:
-MAINIDEA: ENCOUNTERMOB
-PROJECT LEADER: DartPower
-ALTERNATE PROJECT LEADER: Skillz
-COMMON CODER: DartPower
-ALTERNATE CODER: Skillz
-COMMON DESIGNER: Leu Xandro
-Thanks a lot to: Realm667 [sprites & some code], Skillz [code & ideas], and etc for help me :)
-ACS Turret Limiter Code: KORSHUN
-Turrets: Captain Toenail (Enhanced by unknown user from zdoom forum)
-Skill names: NeinCat
-HUD: DartPower, Skillz
+w.i.p.
+
+DEV TEAM:
+ENCOUNTERMOB
+DartPower
+Skillz
+Leutenant Xandro
+KORSHUN
+
+etc
+Captain Toenail
+
+SPRITES:
+ID Software
+/*Banjo Software
+
+That_One_Doom_Mod
+Wh1teFang*/ remove?
