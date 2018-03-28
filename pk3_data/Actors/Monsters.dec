@@ -1,6 +1,6 @@
 ACTOR RandomZombieMan : RandomSpawner 3004
 {
-	DropItem "ZombieMan"
+	DropItem "FT_ZombieMan"
 	DropItem "SentryGunMan"
 	DropItem "IceZombieMan"
 	DropItem "ZombieMan_Translation1"
@@ -8,7 +8,7 @@ ACTOR RandomZombieMan : RandomSpawner 3004
 }
 ACTOR RandomChaingunGuy : RandomSpawner 65
 {
-	DropItem "ChaingunGuy"
+	DropItem "FT_ChaingunGuy"
 	DropItem "VileGunGuy"
 	DropItem "IceChaingunGuy"
 	DropItem "ChaingunGuy_Translation1"
@@ -16,27 +16,27 @@ ACTOR RandomChaingunGuy : RandomSpawner 65
 }
 ACTOR RandomDemon : RandomSpawner 3002
 {
-	DropItem "Demon"
+	DropItem "FT_Demon"
 	DropItem "IceDemon"
 	DropItem "Demon_Translation1"
 	DropItem "Demon_Translation2"
 }
 ACTOR RandomDoomImp : RandomSpawner 3001
 {
-	DropItem "DoomImp"
+	DropItem "FT_DoomImp"
 	DropItem "IceDoomImp"
 	DropItem "DoomImp_Translation1"
 	DropItem "DoomImp_Translation2"
 }
 ACTOR RandomArchvile : RandomSpawner 64
 {
-	DropItem "Archvile"
+	DropItem "FT_Archvile"
 	DropItem "RaisingArchvile"
 	DropItem "BloodArchvile"
 }
 ACTOR RandomCyberdemon : RandomSpawner 16
 {
-	DropItem "Cyberdemon"
+	DropItem "FT_Cyberdemon"
 	DropItem "RaisingCyberdemon"
 	DropItem "MiniCyberdemon"
 }
@@ -471,3 +471,19 @@ ACTOR MiniCyberdemon
 		Goto See
 	}
 }
+ACTOR FT_ZombieMan : ZombieMan
+{
+	PainChance SmallStun, 255
+	States
+	{
+	Pain.SmallStun:
+		POSS G 5
+		POSS G 30 A_Pain
+		Goto See
+	}
+}
+ACTOR FT_ChaingunGuy : ChaingunGuy {}
+ACTOR FT_Demon : Demon {}
+ACTOR FT_DoomImp : DoomImp {}
+ACTOR FT_Archvile : Archvile {}
+ACTOR FT_Cyberdemon : Cyberdemon {}
