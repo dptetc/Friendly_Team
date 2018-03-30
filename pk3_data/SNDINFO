@@ -31,7 +31,7 @@ vox/rus/turretmode/rocket ROCKET
 vox/rus/turretmode/plasma PLASMA
 vox/rus/turretmode/default DEFAULT
 
-STNRFIRE STNRFIRE // PLACEHOLDER
+PhaseMatterZombieMan/GaussFire STNRFIRE
 
 $limit weapons/plasmaf 0
 
