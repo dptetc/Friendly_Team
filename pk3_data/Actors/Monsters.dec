@@ -6,6 +6,8 @@ ACTOR RandomZombieMan : RandomSpawner 3004
 	DropItem "IceZombieMan"
 	DropItem "ZombieMan_Translation1"
 	DropItem "ZombieMan_Translation2"
+	DropItem "BloodyZombieMan"
+	DropItem "PhaseMatterZombieMan" 1 1
 }
 ACTOR RandomChaingunGuy : RandomSpawner 65
 {
@@ -28,12 +30,15 @@ ACTOR RandomDoomImp : RandomSpawner 3001
 	DropItem "IceDoomImp"
 	DropItem "DoomImp_Translation1"
 	DropItem "DoomImp_Translation2"
+	DropItem "DoomImp_Demon"
 }
 ACTOR RandomArchvile : RandomSpawner 64
 {
 	DropItem "FT_Archvile"
 	DropItem "RaisingArchvile"
 	DropItem "BloodArchvile"
+	DropItem "Archvile_Translation1"
+	DropItem "Archvile_Translation2"
 }
 ACTOR RandomCyberdemon : RandomSpawner 16
 {
@@ -384,6 +389,39 @@ ACTOR DoomImp_Translation1 : DoomImp
 ACTOR DoomImp_Translation2 : DoomImp
 {
 	Translation 2
+}
+ACTOR DoomImp_Demon1 : DoomImp
+{
+	Translation "64:79=176:191"
+}
+ACTOR DoomImp_Demon2 : DoomImp
+{
+	Translation "64:79=32:47"
+}
+ACTOR StoneDoomImp : DoomImp
+{
+	Translation "64:79=96:111"
+}
+ACTOR GreenDoomImp : DoomImp
+{
+	Translation "64:79=112:127"
+}
+ACTOR SwampDoomImp : DoomImp
+{
+	Translation "64:79=152:159"
+}
+ACTOR GoldDoomImp : DoomImp
+{
+	Health 500
+	+MISSILEMORE
+	+MISSILEEVENMORE
+	Translation "64:79=160:167"
+}
+ACTOR NightmareDoomImp : DoomImp
+{
+	+MISSILEMORE
+	Health 100
+	Translation "64:79=176:191"
 }
 ACTOR FT_Archvile : Archvile {}
 ACTOR RaisingArchvile
