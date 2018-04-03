@@ -41,7 +41,7 @@ Actor FTMedic : DoomPlayer
 }
 
 Actor IsMedic : Inventory { Inventory.MaxAmount 1 }
-Actor TossStimpack : Inventory { Inventory.MaxAmount 1 }
+/*Actor TossStimpack : Inventory { Inventory.MaxAmount 1 }
 Actor TossMedikit : Inventory { Inventory.MaxAmount 1 }
 
 Actor MedicStimpack : Health
@@ -154,4 +154,4 @@ Actor MedicMedikitItem : CustomInventory
 		NULL Z 0 A_GiveInventory("TossMedikit", 1)
 		Stop
 	}
-}
+}*/
